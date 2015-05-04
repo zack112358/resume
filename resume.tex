@@ -1,0 +1,240 @@
+%%
+%% The following code sets up the document formatting
+%%
+
+%this assumes that res_yy.sty is in some path
+\documentstyle[hyperref, margin, line]{res_yy}
+
+
+\hypersetup{backref,pdfpagemode=Full,colorlinks=true,backref}
+
+\addtolength{\oddsidemargin}{-0.45in}
+\addtolength{\voffset}{-0.30in}
+\addtolength{\textwidth}{1.00in} \addtolength{\textheight}{1.50in}
+
+\renewcommand{\namefont}{\LARGE\emph}
+
+
+
+%%
+%% The following code defines some macros for terms which have raised font
+%% (ie 4\fourth would result 4th with the 'th' raised (superscripted)
+%%
+
+\def\Cplusplus{{C\raise.5ex\hbox{\small ++}}}
+\def\CSharp{{C\raise.5ex\hbox{\small \#}}}
+% 'st' 'nd' 'rd' 'th' superscripts for numbers
+\def\first{{\raise.5ex\hbox{\small st}}}
+\def\second{{\raise.5ex\hbox{\small nd}}}
+\def\third{{\raise.5ex\hbox{\small rd}}}
+\def\fourth{{\raise.5ex\hbox{\small th}}}
+
+%%
+%% starting the actual document
+%%
+
+%\usepackage{fontspec}
+%\usepackage{color}
+%\usepackage[usenames,dvipsnames]{color}
+
+\begin{document}
+%\setmainfont{Adobe Garamond Pro}
+
+\setlength{\parindent}{0pt}
+\setlength{\hangindent}{0pt}
+\setlength{\leftskip}{0pt}
+\setlength{\parskip}{0pt}
+
+%\newcommand{\tt}[1]{\texttt{#1}}
+
+\definecolor{dark-blue}{rgb}{0,0,0.12}
+\newcommand{\blue}[1]{\textcolor{dark-blue}{#1}}
+\definecolor{brass}{rgb}{0.2,0.2,0}
+\newcommand{\brass}[1]{\textcolor{brass}{#1}}
+\newcommand{\headstyle}[1]{\blue{#1}}
+
+\newcommand{\FIXME}[1]{\textcolor{red}{\emph{FIXME #1}}}
+\newcommand{\kw}[1]{\blue{#1}}
+\newcommand{\heavy}[1]{\textbf{#1}}
+
+\name{\brass{Zachary McCord}}
+
+\address{
+\brass{
+{\tt zjmccord@gmail.com}\\
+3336 Dawson St\\
+Pittsburgh, PA 15213\\
+847.754.7987
+}
+}
+
+\begin{resume}
+\end{resume}
+
+
+\section{\brass{\textsc{Education}}}
+
+\headstyle{
+\textbf{Carnegie Mellon University} \hfill August 2006 - December 2010
+}
+
+B.S. in Computer Science with a minor in Mathematical Sciences. GPA of
+$3.\bar0$.
+
+%%
+%% the meat of the resume starts now
+%%
+
+\begin{formatb}
+\employer{l}\title{r}\\
+\location{l}\dates{r}\\
+\body\\
+\end{formatb}
+
+%\section{\brass{\textsc{Objective}}}
+%
+%I'm motivated most by learning and novelty and work best in a small to medium group. Since
+%I'm still finding my interests and talents I'm looking particularly for a position where the work
+%is both varied and challenging. 
+
+\section{\brass{\textsc{Skills}}}
+\begin{description}
+
+\item[\headstyle{Systems}]
+Comfortable developing on \kw{Linux}, \kw{Mac OS X}, \kw{Windows} and \kw{Atmel AVR-8}.
+\item[\headstyle{Languages}]
+Proficient in \kw{C}, \kw{\Cplusplus} and \kw{Perl};
+also know \kw{Qt}, \kw{\CSharp}, \kw{Java}, \kw{bash}, \kw{Objective-C}, \kw{Verilog}, \kw{Ruby},
+\kw{\LaTeX}, \kw{SML}, \kw{OCaml}, \kw{Lisp}, \kw{Scheme} and \kw{OpenGL}.
+%\item[Tools]
+%Comfortable with \kw{doxygen}, \kw{mercurial}, \kw{svn}
+\item[\headstyle{Work style}]
+I comment thoroughly and work best in small groups.
+
+
+\end{description}
+
+\section{\brass{\textsc{Experience}}}
+
+\headstyle{
+\textbf{Pittsburgh Pattern Recognition, Inc. (now part of Google)} \hfill Intern \\
+Pittsburgh, PA                                \hfill April to July 2011
+}
+\begin{itemize}
+\item Wrote the first live, interactive face recognition and tracking demo for
+      PittPatt's latest SDK release.
+\item Integrated demo with SDK prior to SDK release to debug the
+      build-release-and-support chain.
+\item Caught several product bugs before they affected customers.
+\end{itemize}
+\setlength{\parskip}{8pt}
+
+\headstyle{
+\textbf{School of Computer Science, Carnegie Mellon University} \hfill Teaching Assistant \\
+Pittsburgh, PA                                                  \hfill January to May 2011
+}
+\setlength{\parskip}{0pt}
+\begin{itemize}
+\item Created assignments and built course infrastructure for 15-495, \kw{Information Forensics}.
+\end{itemize}
+\setlength{\parskip}{8pt}
+
+\headstyle{
+\textbf{Language Technologies Institute, Carnegie Mellon University} \hfill Student Researcher\\
+Pittsburgh, PA \hfill October 2008 to August 2009
+}
+\setlength{\parskip}{0pt}
+
+Student researcher under Professor Noah Smith (see \headstyle{References}).
+
+%I performed open-ended research and supported other researchers within the ARK
+%research group:
+\begin{itemize}
+\item Managed and processed data on
+      our 20-node \kw{Condor} computing grid.
+\item Researched handwritten grammars for quote
+      extraction, obtaining significant performance gains immediately
+      useful to others in the research group.
+\end{itemize}
+\setlength{\parskip}{8pt}
+
+\headstyle{
+\textbf{Robotics Institute, Carnegie Mellon University} \hfill  Student Researcher \\
+Pittsburgh, PA                                           \hfill  September 2006 to August 2007
+}
+\setlength{\parskip}{0pt}
+\begin{itemize}
+\item Developed 3D robot visualization software in \kw{C} and \kw{OpenGL}.
+\item Wrote \kw{C} code for \kw{AVR-8} microcontroller to control a modular robot over a serial bus.
+\item Worked on redesign and rewrite of Windows/Linux robot control software.
+%\item Soldered a \emph{lot} of wires.
+\end{itemize}
+
+
+\section{\brass{\textsc{Coursework}}}
+\headstyle{
+\textbf{Operating Systems Design and Implementation}
+}
+
+My partner and I wrote a thread library in \kw{C}, and wrote the first \kw{\Cplusplus}\ 
+kernel
+ever submitted in the class.
+
+\headstyle{
+\textbf{Introduction to Computer Architecture}
+}
+
+Our team of 3 designed a simple, pipelined MIPS-like processor core in
+\kw{Verilog}.
+
+\headstyle{
+\textbf{Introduction to Natural Language Processing}
+}
+
+Our team of 3 wrote a question answering system based on Wikipedia articles,
+using \kw{SML} and \kw{Perl}.
+
+
+%%
+%% We use the same formatting for projects as for work experience
+%% Shown below is the formatting used previously
+%%
+%%  \begin{formatb}
+%%    \employer{l}\title{r}\\
+%%    \location{l}\dates{r}\\
+%%    \body\\
+%%  \end{formatb}
+%%
+%% 
+%%  Note that \location is now being used for non-location information
+%%
+
+
+\begin{formatb}
+  \employer{l}\dates{r}\\
+  \body\\
+\end{formatb}
+
+\section{\brass{\textsc{Publications}}}
+
+\headstyle{
+\textbf{Design of a Modular Snake Robot} \hfill IROS 2007
+}
+
+Cornell Wright, Aaron Johnson, Aaron Peck, Zachary McCord, Allison Naaktgeboren, Philip Gianfortoni, Manuel Gonzalez-Rivero, Ross Hatton, and Howie Choset
+
+\section{\brass{\textsc{References}}}
+
+\begin{description}
+\item[\headstyle{Michael A. Sipe, Ph.D.}] VP of Product Development, Pittsburgh
+Pattern Recognition, Inc.\\
+\texttt{sipe@ieee.org}. 
+\item[\headstyle{Brian R. Colonna}] Software Engineer, Pittsburgh Pattern
+Recognition, Inc.\\
+\texttt{brian.r.colonna@gmail.com}. 
+\item[\headstyle{Prof. Noah Smith}] Associate Professor, Language Technologies Institute, Carnegie
+Mellon University. \texttt{nasmith@cs.cmu.edu}
+%\item Andrew Drake. \texttt{adrake@andrew.cmu.edu}. My Operating Systems partner.
+\end{description}
+
+\end{document}
