@@ -43,13 +43,15 @@
 \setlength{\parindent}{0pt}
 \setlength{\hangindent}{0pt}
 \setlength{\leftskip}{0pt}
-\setlength{\parskip}{0pt}
+% \setlength{\parskip}{8pt}
 
 %\newcommand{\tt}[1]{\texttt{#1}}
 
 \definecolor{dark-blue}{rgb}{0,0,0.12}
+% \definecolor{dark-blue}{rgb}{0,0,1}
 \newcommand{\blue}[1]{\textcolor{dark-blue}{#1}}
-\definecolor{brass}{rgb}{0.2,0.2,0}
+\definecolor{brass}{rgb}{0.12,0.12,0}
+% \definecolor{brass}{rgb}{0.5,0.5,0}
 \newcommand{\brass}[1]{\textcolor{brass}{#1}}
 \newcommand{\headstyle}[1]{\blue{#1}}
 
@@ -61,11 +63,7 @@
 
 \address{
 \brass{
-{\tt zjmccord@gmail.com}\\
-3336 Dawson St\\
-Pittsburgh, PA 15213\\
-847.754.7987
-}
+{\tt zjmccord@gmail.com} \hskip 3cm 185 Hudson St, Somerville, MA 02144 \hskip 3cm 847.754.7987}
 }
 
 \begin{resume}
@@ -75,11 +73,10 @@ Pittsburgh, PA 15213\\
 \section{\brass{\textsc{Education}}}
 
 \headstyle{
-\textbf{Carnegie Mellon University} \hfill August 2006 - December 2010
+\textbf{Carnegie Mellon University} \hfill August 2006 - December 2010\\
 }
-
-B.S. in Computer Science with a minor in Mathematical Sciences. GPA of
-$3.\bar0$.
+B.S. in Computer Science with a minor in Mathematical Sciences.
+%% GPA of $3.\bar0$.
 
 %%
 %% the meat of the resume starts now
@@ -99,100 +96,117 @@ $3.\bar0$.
 
 \section{\brass{\textsc{Skills}}}
 \begin{description}
-
 \item[\headstyle{Systems}]
-Comfortable developing on \kw{Linux}, \kw{Mac OS X}, \kw{Windows} and \kw{Atmel AVR-8}.
+Experience developing on \kw{Linux}, \kw{Mac OS X}, \kw{Windows} and \kw{Atmel
+AVR-8}.
 \item[\headstyle{Languages}]
-Proficient in \kw{C}, \kw{\Cplusplus} and \kw{Perl};
-also know \kw{Qt}, \kw{\CSharp}, \kw{Java}, \kw{bash}, \kw{Objective-C}, \kw{Verilog}, \kw{Ruby},
-\kw{\LaTeX}, \kw{SML}, \kw{OCaml}, \kw{Lisp}, \kw{Scheme} and \kw{OpenGL}.
-%\item[Tools]
-%Comfortable with \kw{doxygen}, \kw{mercurial}, \kw{svn}
-\item[\headstyle{Work style}]
-I comment thoroughly and work best in small groups.
-
+Proficient in \kw{Python}, \kw{Django}, \kw{C} and \kw{\Cplusplus};
+also have experience with \kw{bash}, \kw{HTML 5}/\kw{Javascript},
+\kw{Qt}, \kw{Java}, \kw{Verilog}, various functional languages and \kw{OpenGL}.
+% \kw{\CSharp}, \kw{Objective-C}, 
+% \kw{Perl}, \kw{Ruby}, \kw{\LaTeX}, the \kw{ML} family, \kw{Haskell}, \kw{Lisp}/\kw{Scheme}
+%% \item[\headstyle{Tools}]
+%% Most comfortable with \kw{git}/\kw{vim}/\kw{bash};
+%% also have experience with \kw{XCode}, \kw{Eclipse}, \kw{Visual Studio}, \kw{doxygen}, \kw{mercurial} and \kw{svn}.
+\item[\headstyle{Work Style}]
+I comment my code and work best as part of a small team.
 
 \end{description}
 
-\section{\brass{\textsc{Experience}}}
+\section{\brass{\textsc{History}}}
+
+\headstyle{
+\textbf{Elysium Digital, LLC}                 \hfill Computer Scientist \\
+Boston, MA                                    \hfill June 2012 - Present \\
+}
+Provided consulting expertise to client law firms as well as performing
+internal software DevOps. My DevOps role was on our internal
+\kw{Python}/\kw{Django}-based portal, which Elysium employees, managers and
+accountants use to track
+time, plan budgets, analyse work patterns and track court orders.
+
+\begin{itemize}
+\item Led the team to complete major new features
+\item Redesigned unsatisfactory parts of our database schema
+\item Staged, QA-tested and deployed new releases, and provided ongoing support
+\item Worked with users to clarify their needs and design features to satisfy
+those needs within the available development budget
+\item Started the (ongoing) process of replacing parts of the portal
+with off-the-shelf software
+\end{itemize}
+
+Additionally, in my litigation consultant role I supported clients' litigation
+by examining source code, writing lay summary documents on various
+technologies, and appearing in court. Technologies involved included
+\kw{information retrieval}, \kw{Java}, \kw{Dalvik}, \kw{compilers} and
+\kw{gesture-based UIs}.
+%% \setlength{\parskip}{8pt}
 
 \headstyle{
 \textbf{Pittsburgh Pattern Recognition, Inc. (now part of Google)} \hfill Intern \\
-Pittsburgh, PA                                \hfill April to July 2011
+Pittsburgh, PA                                            \hfill April to July 2011\\
 }
-\begin{itemize}
-\item Wrote the first live, interactive face recognition and tracking demo for
-      PittPatt's latest SDK release.
-\item Integrated demo with SDK prior to SDK release to debug the
-      build-release-and-support chain.
-\item Caught several product bugs before they affected customers.
-\end{itemize}
-\setlength{\parskip}{8pt}
+Wrote the first live, interactive face recognition and tracking demo for
+PittPatt's SDK, and caught several product bugs before they affected customers.
+%% \setlength{\parskip}{8pt}
 
 \headstyle{
 \textbf{School of Computer Science, Carnegie Mellon University} \hfill Teaching Assistant \\
-Pittsburgh, PA                                                  \hfill January to May 2011
+Pittsburgh, PA                                                  \hfill January to May 2011\\
 }
-\setlength{\parskip}{0pt}
-\begin{itemize}
-\item Created assignments and built course infrastructure for 15-495, \kw{Information Forensics}.
-\end{itemize}
-\setlength{\parskip}{8pt}
+%% \setlength{\parskip}{0pt}
+Created assignments and built course infrastructure for 15-495, \kw{Information Forensics}.
+%% \setlength{\parskip}{8pt}
 
 \headstyle{
 \textbf{Language Technologies Institute, Carnegie Mellon University} \hfill Student Researcher\\
-Pittsburgh, PA \hfill October 2008 to August 2009
+Pittsburgh, PA \hfill October 2008 to August 2009\\
 }
-\setlength{\parskip}{0pt}
-
-Student researcher under Professor Noah Smith (see \headstyle{References}).
+%% \setlength{\parskip}{0pt}
+Student researcher under Professor Noah Smith.
+I researched handwritten and meachine-learned grammars for a novel task and processed data on a \kw{Condor} grid.
 
 %I performed open-ended research and supported other researchers within the ARK
 %research group:
-\begin{itemize}
-\item Managed and processed data on
-      our 20-node \kw{Condor} computing grid.
-\item Researched handwritten grammars for quote
-      extraction, obtaining significant performance gains immediately
-      useful to others in the research group.
-\end{itemize}
-\setlength{\parskip}{8pt}
+%% \begin{itemize}
+%% \item Managed and processed data on
+%%       our 20-node \kw{Condor} computing grid.
+%% \item Researched handwritten and machine-learned grammars for a novel quote
+%%       extraction task.
+%% \end{itemize}
+%% \setlength{\parskip}{8pt}
 
 \headstyle{
 \textbf{Robotics Institute, Carnegie Mellon University} \hfill  Student Researcher \\
-Pittsburgh, PA                                           \hfill  September 2006 to August 2007
+Pittsburgh, PA                                          \hfill  September 2006
+to August 2007\\
 }
-\setlength{\parskip}{0pt}
-\begin{itemize}
-\item Developed 3D robot visualization software in \kw{C} and \kw{OpenGL}.
-\item Wrote \kw{C} code for \kw{AVR-8} microcontroller to control a modular robot over a serial bus.
-\item Worked on redesign and rewrite of Windows/Linux robot control software.
-%\item Soldered a \emph{lot} of wires.
-\end{itemize}
-
+%% \setlength{\parskip}{0pt}
+Worked with a ten-person team to write desktop robot control software and
+robot firmware as well as build the robots themselves.
 
 \section{\brass{\textsc{Coursework}}}
 \headstyle{
-\textbf{Operating Systems Design and Implementation}
+\textbf{Operating Systems Design and Implementation} \hfill Carnegie Mellon
+University, Fall 2010\\
 }
+My partner and I wrote the first \kw{\Cplusplus}\ kernel
+ever submitted in the class, as the kernel is traditionally written in
+straight \kw{C}.
 
-My partner and I wrote a thread library in \kw{C}, and wrote the first \kw{\Cplusplus}\ 
-kernel
-ever submitted in the class.
-
-\headstyle{
-\textbf{Introduction to Computer Architecture}
-}
-
-Our team of 3 designed a simple, pipelined MIPS-like processor core in
-\kw{Verilog}.
-
-\headstyle{
-\textbf{Introduction to Natural Language Processing}
-}
-
-Our team of 3 wrote a question answering system based on Wikipedia articles,
-using \kw{SML} and \kw{Perl}.
+%% \headstyle{
+%% \textbf{Introduction to Computer Architecture}
+%% }
+%% 
+%% Our team of 3 designed a simple, pipelined MIPS-like processor core in
+%% \kw{Verilog}.
+%% 
+%% \headstyle{
+%% \textbf{Introduction to Natural Language Processing}
+%% }
+%% 
+%% Our team of 3 wrote a question answering system based on Wikipedia articles,
+%% using \kw{SML} and \kw{Perl}.
 
 
 %%
@@ -209,6 +223,9 @@ using \kw{SML} and \kw{Perl}.
 %%  Note that \location is now being used for non-location information
 %%
 
+\section{\brass{\textsc{Interests}}}
+In my free time, I work on projects ranging across \kw{machine translation},
+\kw{Android} apps, productivity tools, browser games, and \kw{3D printing}, among other pursuits.
 
 \begin{formatb}
   \employer{l}\dates{r}\\
@@ -218,23 +235,22 @@ using \kw{SML} and \kw{Perl}.
 \section{\brass{\textsc{Publications}}}
 
 \headstyle{
-\textbf{Design of a Modular Snake Robot} \hfill IROS 2007
+\textbf{Design of a Modular Snake Robot} \hfill IROS 2007\\
 }
-
 Cornell Wright, Aaron Johnson, Aaron Peck, Zachary McCord, Allison Naaktgeboren, Philip Gianfortoni, Manuel Gonzalez-Rivero, Ross Hatton, and Howie Choset
 
-\section{\brass{\textsc{References}}}
-
-\begin{description}
-\item[\headstyle{Michael A. Sipe, Ph.D.}] VP of Product Development, Pittsburgh
-Pattern Recognition, Inc.\\
-\texttt{sipe@ieee.org}. 
-\item[\headstyle{Brian R. Colonna}] Software Engineer, Pittsburgh Pattern
-Recognition, Inc.\\
-\texttt{brian.r.colonna@gmail.com}. 
-\item[\headstyle{Prof. Noah Smith}] Associate Professor, Language Technologies Institute, Carnegie
-Mellon University. \texttt{nasmith@cs.cmu.edu}
-%\item Andrew Drake. \texttt{adrake@andrew.cmu.edu}. My Operating Systems partner.
-\end{description}
+%%  \section{\brass{\textsc{References}}}
+%%  
+%%  \begin{description}
+%%  \item[\headstyle{Michael A. Sipe, Ph.D.}] VP of Product Development, Pittsburgh
+%%  Pattern Recognition, Inc.\\
+%%  \texttt{sipe@ieee.org}. 
+%%  \item[\headstyle{Brian R. Colonna}] Software Engineer, Pittsburgh Pattern
+%%  Recognition, Inc.\\
+%%  \texttt{brian.r.colonna@gmail.com}. 
+%%  \item[\headstyle{Prof. Noah Smith}] Associate Professor, Language Technologies Institute, Carnegie
+%%  Mellon University. \texttt{nasmith@cs.cmu.edu}
+%%  %\item Andrew Drake. \texttt{adrake@andrew.cmu.edu}. My Operating Systems partner.
+%%  \end{description}
 
 \end{document}
