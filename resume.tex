@@ -5,7 +5,6 @@
 %this assumes that res_yy.sty is in some path
 \documentstyle[hyperref, margin, line]{res_yy}
 
-
 \hypersetup{backref,pdfpagemode=Full,colorlinks=true,backref}
 
 \addtolength{\oddsidemargin}{-0.45in}
@@ -33,25 +32,15 @@
 %% starting the actual document
 %%
 
-%\usepackage{fontspec}
-%\usepackage{color}
-%\usepackage[usenames,dvipsnames]{color}
 
 \begin{document}
-%\setmainfont{Adobe Garamond Pro}
-
-\setlength{\parindent}{0pt}
-\setlength{\hangindent}{0pt}
-\setlength{\leftskip}{0pt}
-% \setlength{\parskip}{8pt}
 
 %\newcommand{\tt}[1]{\texttt{#1}}
-
 \definecolor{dark-blue}{rgb}{0,0,0.12}
-% \definecolor{dark-blue}{rgb}{0,0,1}
+%\definecolor{dark-blue}{rgb}{0,0,1}
 \newcommand{\blue}[1]{\textcolor{dark-blue}{#1}}
 \definecolor{brass}{rgb}{0.12,0.12,0}
-% \definecolor{brass}{rgb}{0.5,0.5,0}
+%\definecolor{brass}{rgb}{0.5,0.5,0}
 \newcommand{\brass}[1]{\textcolor{brass}{#1}}
 \newcommand{\headstyle}[1]{\blue{#1}}
 
@@ -59,16 +48,33 @@
 \newcommand{\kw}[1]{\blue{#1}}
 \newcommand{\heavy}[1]{\textbf{#1}}
 
+\let\oldemployer\employer
+\let\oldtitle\title
+\let\oldlocation\location
+\let\olddates\dates
+
+\renewcommand{\employer}[1]{\oldemployer{\textbf{\headstyle{#1}}}}
+\renewcommand{\title}[1]{\oldtitle{\headstyle{#1}}}
+\renewcommand{\location}[1]{\oldlocation{\headstyle{#1}}}
+\renewcommand{\dates}[1]{\olddates{\headstyle{#1}}}
+
+
+
+%the name in big fonts at the top of resume
+%this is left aligned
 \name{\brass{Zachary McCord}}
 
 \address{
 \brass{
-{\tt zjmccord@gmail.com} \hskip 3cm 185 Hudson St, Somerville, MA 02144 \hskip 3cm 847.754.7987}
+{\tt zjmccord@gmail.com} \hskip 3cm
+185 Hudson St, Somerville, MA 02144 \hskip 3cm
+847.754.7987}
 }
 
 \begin{resume}
-\end{resume}
 
+%%
+%%
 
 \section{\brass{\textsc{Education}}}
 
@@ -79,20 +85,14 @@ B.S. in Computer Science with a minor in Mathematical Sciences.
 %% GPA of $3.\bar0$.
 
 %%
-%% the meat of the resume starts now
 %%
 
 \begin{formatb}
-\employer{l}\title{r}\\
-\location{l}\dates{r}\\
-\body\\
+  \employer{l}\title{r}\\
+  \location{l}\dates{r}\\
+  \body\\
 \end{formatb}
 
-%\section{\brass{\textsc{Objective}}}
-%
-%I'm motivated most by learning and novelty and work best in a small to medium group. Since
-%I'm still finding my interests and talents I'm looking particularly for a position where the work
-%is both varied and challenging. 
 
 \section{\brass{\textsc{Skills}}}
 \begin{description}
@@ -115,10 +115,11 @@ I comment my code and work best as part of a small team.
 
 \section{\brass{\textsc{History}}}
 
-\headstyle{
-\textbf{Elysium Digital, LLC}                 \hfill Computer Scientist \\
-Boston, MA                                    \hfill June 2012 - Present \\
-}
+\employer{Elysium Digital, LLC}
+\title{Computer Scientist}
+\location{Boston, MA}
+\dates{June 2012 to Present}
+\begin{position}
 Provided consulting expertise to client law firms as well as performing
 internal software DevOps. My DevOps role was on our internal
 \kw{Python}/\kw{Django}-based portal, which Elysium employees, managers and
@@ -140,32 +141,34 @@ by examining source code, writing lay summary documents on various
 technologies, and appearing in court. Technologies involved included
 \kw{information retrieval}, \kw{Java}, \kw{Dalvik}, \kw{compilers} and
 \kw{gesture-based UIs}.
-%% \setlength{\parskip}{8pt}
+\end{position}
 
-\headstyle{
-\textbf{Pittsburgh Pattern Recognition, Inc. (now part of Google)} \hfill Intern \\
-Pittsburgh, PA                                            \hfill April to July 2011\\
-}
+\employer{Pittsburgh Pattern Recognition, Inc. (now part of Google)}
+\title{Intern}
+\location{Pittsburgh, PA}
+\dates{April to July 2011}
+\begin{position}
 Wrote the first live, interactive face recognition and tracking demo for
 PittPatt's SDK, and caught several product bugs before they affected customers.
-%% \setlength{\parskip}{8pt}
+\end{position}
 
-\headstyle{
-\textbf{School of Computer Science, Carnegie Mellon University} \hfill Teaching Assistant \\
-Pittsburgh, PA                                                  \hfill January to May 2011\\
-}
-%% \setlength{\parskip}{0pt}
+\employer{School of Computer Science, Carnegie Mellon University}
+\title{Teaching Assistant}
+\location{Pittsburgh, PA}
+\dates{January to May 2011}
+\begin{position}
 Created assignments and built course infrastructure for 15-495, \kw{Information Forensics}.
-%% \setlength{\parskip}{8pt}
+\end{position}
 
-\headstyle{
-\textbf{Language Technologies Institute, Carnegie Mellon University} \hfill Student Researcher\\
-Pittsburgh, PA \hfill October 2008 to August 2009\\
-}
-%% \setlength{\parskip}{0pt}
+\employer{Language Technologies Institute, Carnegie Mellon University}
+\title{Student Researcher}
+\location{Pittsburgh, PA}
+\dates{October 2008 to August 2009}
+\begin{position}
 Student researcher under Professor Noah Smith.
 I researched handwritten and meachine-learned grammars for a novel task and processed data on a \kw{Condor} grid.
-
+\end{position}
+ 
 %I performed open-ended research and supported other researchers within the ARK
 %research group:
 %% \begin{itemize}
@@ -174,22 +177,21 @@ I researched handwritten and meachine-learned grammars for a novel task and proc
 %% \item Researched handwritten and machine-learned grammars for a novel quote
 %%       extraction task.
 %% \end{itemize}
-%% \setlength{\parskip}{8pt}
 
-\headstyle{
-\textbf{Robotics Institute, Carnegie Mellon University} \hfill  Student Researcher \\
-Pittsburgh, PA                                          \hfill  September 2006
-to August 2007\\
-}
-%% \setlength{\parskip}{0pt}
+\employer{Robotics Institute, Carnegie Mellon University}
+\title{Student Researcher}
+\location{Pittsburgh, PA}
+\dates{September 2006 to August 2007}
+\begin{position}
 Worked with a ten-person team to write desktop robot control software and
 robot firmware as well as build the robots themselves.
+\end{position}
 
 \section{\brass{\textsc{Coursework}}}
 \headstyle{
 \textbf{Operating Systems Design and Implementation} \hfill Carnegie Mellon
-University, Fall 2010\\
 }
+University, Fall 2010\\
 My partner and I wrote the first \kw{\Cplusplus}\ kernel
 ever submitted in the class, as the kernel is traditionally written in
 straight \kw{C}.
@@ -225,7 +227,7 @@ straight \kw{C}.
 
 \section{\brass{\textsc{Interests}}}
 In my free time, I work on projects ranging across \kw{machine translation},
-\kw{Android} apps, productivity tools, browser games, and \kw{3D printing}, among other pursuits.
+\kw{Android} apps, productivity tools, browser games and \kw{3D printing}, among other pursuits.
 
 \begin{formatb}
   \employer{l}\dates{r}\\
@@ -253,4 +255,5 @@ Cornell Wright, Aaron Johnson, Aaron Peck, Zachary McCord, Allison Naaktgeboren,
 %%  %\item Andrew Drake. \texttt{adrake@andrew.cmu.edu}. My Operating Systems partner.
 %%  \end{description}
 
+\end{resume}
 \end{document}
