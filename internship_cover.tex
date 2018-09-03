@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% The following code sets up the document formatting
+%%
+
+%this assumes that res_yy.sty is in some path
+\documentstyle[hyperref, margin, line]{res_yy}
+
+\hypersetup{backref,pdfpagemode=Full,colorlinks=true,backref}
+
+\addtolength{\oddsidemargin}{-0.45in}
+\addtolength{\voffset}{-0.30in}
+\addtolength{\textwidth}{1.00in} \addtolength{\textheight}{1.50in}
+
+\renewcommand{\namefont}{\LARGE\emph}
+
+
+
+%%
+%% The following code defines some macros for terms which have raised font
+%% (ie 4\fourth would result 4th with the 'th' raised (superscripted)
+%%
+
+\def\Cplusplus{{\rm C\raise.5ex\hbox{\small ++}}}
+\def\CSharp{{\rm C\raise.5ex\hbox{\small \#}}}
+% 'st' 'nd' 'rd' 'th' superscripts for numbers
+\def\first{{\raise.5ex\hbox{\small st}}}
+\def\second{{\raise.5ex\hbox{\small nd}}}
+\def\third{{\raise.5ex\hbox{\small rd}}}
+\def\fourth{{\raise.5ex\hbox{\small th}}}
+
+\def\company{\red{COMPANY NAME}}
+\def\position{\red{position}}
+
+
+%%
+%% starting the actual document
+%%
+
+\begin{document}
+
+%the name in big fonts at the top of resume
+%this is left aligned
+\name{Zachary McCord}
+
+%this is right aligned
+\address{
+zjmccord@gmail.com\\
+3336 Dawson St\\
+Pittsburgh, PA 15213
+}
+
+I'm interested with an internship position with \company; I've also graduated
+from Carnegie Mellon with my B.S. People tell me this is peculiar. The reason is
+simple: as my resume shows I've never actually worked outside the
+university. It seems wise to take a shorter-term position to see how the world
+outside academia is before signing on for the long haul. The usual pay
+for an undergrad in school will be quite acceptable.
+
+Ideally being a
+\position for \company will turn out to be a good fit, and I can then pursue a
+full-time position with you. Whether or not that's true, though, I look forward
+to working with \company.
+
+\end{document}
